@@ -21,6 +21,10 @@ public class ServerSleeper extends JavaPlugin {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if (!sender.hasPermission("serversleeper.sleep")) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to do this!");
+            return true;
+        }
         if (args.length < 1 || args.length > 2) {
             sender.sendMessage(ChatColor.RED + "Incorrect usage! Please use: /sleep <milliseconds> [killWatchDog: true|false]");
             return true;

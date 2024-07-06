@@ -4,3 +4,6 @@ main: io.github.lumine1909.ServerSleeper
 api-version: 1.13
 commands:
   sleep:
+permissions:
+  serversleeper.sleep:
+    default: op
