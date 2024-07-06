@@ -1,0 +1,9 @@
+name: ServerSleeper
+version: 1.14.514
+main: io.github.lumine1909.ServerSleeper
+api-version: 1.13
+commands:
+  sleep:
+permissions:
+  serversleeper.sleep:
+    default: op
